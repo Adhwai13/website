@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Civil Engineering Department</title>
+<style>
+  body { margin: 0; font-family: "Lucida Sans", "Segoe UI", sans-serif; color: #3e2723; background: #fff; }
+  header { background: #5d4037; color: #fff8e1; padding: 25px 50px; }
+  header img { float: left; margin-right: 20px; }
+  header h1 { margin: 8px 0 4px; font-size: 30px; }
+  header p { margin: 0; color: #ffcc80; }
+  nav { background: #ffca28; text-align: center; padding: 10px; }
+  nav a { color: #3e2723; text-decoration: none; padding: 0 12px; border-right: 1px solid #8d6e63; }
+  nav a:last-child { border-right: none; }
+  section { padding: 15px 50px 20px; }
+  section:nth-of-type(even) { background: #fbf6ef; }
+  h2 { color: #5d4037; border-left: 6px solid #ffca28; padding-left: 10px; }
+  ul.subjects { list-style-type: disc; line-height: 1.7; }
+  dl dt { font-weight: bold; color: #5d4037; margin-top: 8px; }
+  dl dd { margin-left: 20px; }
+  table { border-collapse: collapse; width: 80%; }
+  caption { font-weight: bold; padding: 6px; text-align: left; }
+  thead th { background: #5d4037; color: #fff8e1; }
+  th, td { border: 1px solid #a1887f; padding: 7px 10px; text-align: left; }
+  form p { margin: 8px 0; }
+  form label { display: inline-block; width: 150px; font-weight: bold; }
+  form input[type="text"], form input[type="email"], form input[type="tel"], form select { width: 260px; padding: 5px; border: 1px solid #a1887f; }
+  form input[type="submit"], form input[type="reset"] { background: #ffca28; border: 1px solid #5d4037; padding: 6px 20px; margin-right: 6px; }
+  footer { background: #3e2723; color: #d7ccc8; text-align: center; padding: 12px; }
+  footer a { color: #ffca28; }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="images/civil-logo.svg" alt="Civil Engineering Department Logo" width="80" height="80">
+  <h1>Department of Civil Engineering</h1>
+  <p>Building strong foundations for tomorrow</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#programmes">Programmes</a>
+  <a href="#faculty">Faculty</a>
+  <a href="#facilities">Facilities</a>
+  <a href="#enquiry">Enquiry</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>The <strong>Department of Civil Engineering</strong> started in the year <b>1993</b> and is the first department of the college.
+      It prepares students to plan, design and construct buildings, roads, bridges and water supply systems.</p>
+    <p>The department carries out <em>soil testing and material testing</em> for local government projects.
+      <ins>New:</ins> a Surveying Camp is conducted every year for third-year students.</p>
+  </section>
+
+  <section id="programmes">
+    <h2>Academic Programmes</h2>
+    <p>Programmes offered: <b>B.Tech Civil Engineering</b> (4 years) and <b>M.Tech Structural Engineering</b> (2 years).</p>
+    <p>Important subjects in the curriculum:</p>
+    <ul class="subjects">
+      <li>Surveying</li>
+      <li>Strength of Materials</li>
+      <li>Structural Analysis</li>
+      <li>Geotechnical Engineering</li>
+      <li>Transportation Engineering</li>
+      <li>Environmental Engineering</li>
+    </ul>
+  </section>
+
+  <section id="faculty">
+    <h2>Our Faculty</h2>
+    <table>
+      <caption>Table: Faculty members of Civil Engineering</caption>
+      <thead>
+        <tr><th>Name</th><th>Designation</th><th>Area of Specialization</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Dr. Gopakumar R</td><td>Professor &amp; HOD</td><td>Structural Engineering</td></tr>
+        <tr><td>Dr. Bindu Mathew</td><td>Professor</td><td>Geotechnical Engineering</td></tr>
+        <tr><td>Mr. Ajith Kumar V</td><td>Associate Professor</td><td>Transportation Engineering</td></tr>
+        <tr><td>Mrs. Asha Raj</td><td>Assistant Professor</td><td>Environmental Engineering</td></tr>
+        <tr><td>Mr. Faisal Rahman</td><td>Assistant Professor</td><td>Surveying &amp; GIS</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="facilities">
+    <h2>Facilities</h2>
+    <dl>
+      <dt>Material Testing Lab</dt>
+      <dd>Universal Testing Machine and compression testing machines.</dd>
+      <dt>Survey Lab</dt>
+      <dd>Total stations, levels and GPS instruments.</dd>
+      <dt>Geotechnical Lab</dt>
+      <dd>Equipment for soil classification and strength tests.</dd>
+    </dl>
+  </section>
+
+  <section id="enquiry">
+    <h2>Enquiry Form</h2>
+    <form action="#" method="post">
+      <p><label for="sn">Your Name</label><input type="text" id="sn" name="name" required></p>
+      <p><label for="se">Email</label><input type="email" id="se" name="email" required></p>
+      <p><label for="sp">Phone Number</label><input type="tel" id="sp" name="phone" pattern="[0-9]{10}"></p>
+      <p><label for="sc">Course Preference</label>
+        <select id="sc" name="course">
+          <optgroup label="Undergraduate">
+            <option>B.Tech Civil Engineering</option>
+          </optgroup>
+          <optgroup label="Postgraduate">
+            <option>M.Tech Structural Engineering</option>
+          </optgroup>
+        </select></p>
+      <p><label></label><input type="submit" value="Submit"><input type="reset" value="Reset"></p>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Details</h2>
+    <p>Head of Department, Civil Engineering<br>
+      Phone: 0471-2445566 &nbsp;|&nbsp; Email: <a href="mailto:civil@example.edu">civil@example.edu</a></p>
+    <p>See also: <a href="https://www.example.edu" target="_blank">College Website</a>,
+      <a href="https://www.bis.gov.in" target="_blank">Bureau of Indian Standards</a>,
+      <a href="https://www.aicte-india.org" target="_blank">AICTE</a></p>
+  </section>
+</main>
+
+<footer>
+  &copy; 2026 Department of Civil Engineering &middot; Web page by Adhwai Shyjith &middot; <a href="#about">Back to top</a>
+</footer>
+
+</body>
+</html>

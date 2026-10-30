@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Web Programming Report - Adhwai Shyjith</title>
+<style>
+  @page { size: A4; margin: 17mm 18mm; }
+  body { font-family: "Book Antiqua", Palatino, "Palatino Linotype", serif; font-size: 10.6pt; line-height: 1.42; color: #2b1d16; margin: 0; }
+  .front { height: 262mm; text-align: center; page-break-after: always; padding-top: 28mm; box-sizing: border-box; }
+  .front .emblem { width: 34mm; height: 34mm; margin: 0 auto; border: 3px solid #5d4037; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 26pt; color: #5d4037; font-weight: bold; }
+  .front h1 { text-transform: uppercase; font-size: 21pt; letter-spacing: 1px; color: #3e2723; margin: 14mm 0 3mm; line-height: 1.3; }
+  .front .line { width: 70mm; margin: 0 auto; border-top: 3px double #5d4037; }
+  .front .sub { font-style: italic; font-size: 12.5pt; margin: 4mm 0 30mm; color: #6d4c41; }
+  .front .by { font-size: 11pt; color: #6d4c41; margin-bottom: 4mm; }
+  .front table { margin: 0 auto; border: 1px solid #5d4037; border-collapse: collapse; font-size: 12pt; min-width: 110mm; }
+  .front td { border: 1px solid #a1887f; padding: 6px 14px; text-align: left; }
+  .front td:first-child { background: #efebe9; font-weight: bold; width: 40mm; }
+  h2 { text-transform: uppercase; font-size: 12pt; letter-spacing: .5px; color: #4e342e; margin: 15px 0 6px; padding-bottom: 3px; border-bottom: 3px double #8d6e63; page-break-after: avoid; }
+  p { margin: 4px 0; text-align: justify; }
+  code { font-family: "Lucida Console", Consolas, monospace; font-size: 8.8pt; color: #6d4c41; }
+  .listing { margin: 6px 0; page-break-inside: avoid; }
+  .listing .cap { font-size: 9pt; font-weight: bold; color: #5d4037; break-after: avoid; page-break-after: avoid; }
+  pre { border: 1px dotted #6d4c41; background: #fdfaf6; padding: 6px 10px; font-family: "Lucida Console", Consolas, monospace; font-size: 8.1pt; line-height: 1.35; margin: 2px 0 0; white-space: pre-wrap; }
+  pre .tg { color: #8d3b12; font-weight: bold; }
+  pre .av { color: #1b5e20; }
+  .plate { text-align: center; margin: 8px 0; page-break-inside: avoid; }
+  .plate img { border: 6px solid #efebe9; outline: 1px solid #a1887f; }
+  .plate div { font-size: 9pt; font-style: italic; color: #5d4037; margin-top: 3px; }
+  .pair { display: flex; gap: 14px; align-items: flex-start; }
+  .pair > * { flex: 1; min-width: 0; }
+  dl.def { margin: 4px 0; }
+  dl.def dt { font-weight: bold; color: #4e342e; }
+  dl.def dd { margin: 0 0 3px 16px; }
+  table.grid { border-collapse: collapse; width: 100%; font-size: 9.6pt; page-break-inside: avoid; }
+  table.grid th, table.grid td { border: 1px solid #a1887f; padding: 3px 7px; text-align: left; }
+  table.grid th { background: #5d4037; color: #fff8e1; }
+  table.grid tr:nth-child(even) td { background: #faf6f2; }
+  ol.refs { font-size: 9.8pt; }
+</style>
+</head>
+<body>
+
+<div class="front">
+  <div class="emblem">&lt;/&gt;</div>
+  <h1>Development of a Civil Engineering<br>Department Website using HTML</h1>
+  <div class="line"></div>
+  <div class="sub">Web Programming &ndash; Assignment Report</div>
+  <div class="by">Submitted by</div>
+  <table>
+    <tr><td>Name</td><td>Adhwai Shyjith</td></tr>
+    <tr><td>Roll No.</td><td>13</td></tr>
+    <tr><td>Class</td><td>S7 CSA</td></tr>
+    <tr><td>Subject</td><td>Web Programming</td></tr>
+    <tr><td>Date</td><td>29-10-2026</td></tr>
+  </table>
+</div>
+
+<h2>I. Introduction</h2>
+<p>A department website is the first place where students and parents look for information. In this assignment a simple website was created for the <b>Department of Civil Engineering</b> using HTML. It has a brown header with the department logo, a yellow menu bar, and six full-width sections: About Us, Academic Programmes, Our Faculty, Facilities, Enquiry Form and Contact Details. Alternate sections have a light background so that the reader can easily see where each section begins. The code was written in VS Code and the result was checked in Microsoft Edge.</p>
+<div class="plate"><img src="screenshots/home.png" width="76%" alt="Civil Engineering home page"><div>Plate 1. Home page of the Civil Engineering department website</div></div>
+
+<h2>II. HTML Document Structure</h2>
+<p>An HTML document has a fixed structure. The browser first reads the document type, then the head (information about the page) and finally the body (the content to display).</p>
+<div class="pair">
+<div class="listing"><div class="cap">Listing 1. Skeleton of index.html</div>
+<script type="text/plain" class="code">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Civil Engineering Department</title>
+  <style> ... </style>
+</head>
+<body>
+  ... header, nav, main, footer ...
+</body>
+</html>
+</script></div>
+<dl class="def">
+  <dt>&lt;!DOCTYPE html&gt;</dt><dd>Declares the document as HTML5; without it the browser may use &ldquo;quirks mode&rdquo;.</dd>
+  <dt>&lt;html&gt;</dt><dd>The outermost (root) element of the page.</dd>
+  <dt>&lt;head&gt;</dt><dd>Holds metadata such as the character set, the title and CSS.</dd>
+  <dt>&lt;title&gt;</dt><dd>Sets the name seen on the browser tab.</dd>
+  <dt>&lt;body&gt;</dt><dd>Contains all visible elements of the page.</dd>
+</dl>
+</div>
+
+<h2>III. Headings, Paragraphs and Text Formatting</h2>
+<p>The page title is written with <code>&lt;h1&gt;</code> and the section titles with <code>&lt;h2&gt;</code>; HTML supports six levels down to <code>&lt;h6&gt;</code>. Text blocks are written in <code>&lt;p&gt;</code>. The formatting tags used are <code>&lt;strong&gt;</code> (important, bold), <code>&lt;b&gt;</code> (bold), <code>&lt;em&gt;</code> (emphasis, italic) and <code>&lt;ins&gt;</code>, which shows newly inserted text with an underline.</p>
+<div class="listing"><div class="cap">Listing 2. About Us section</div>
+<script type="text/plain" class="code">
+<h2>About Us</h2>
+<p>The <strong>Department of Civil Engineering</strong> started in the year <b>1993</b> ...</p>
+<p>The department carries out <em>soil testing and material testing</em> for local government projects.
+   <ins>New:</ins> a Surveying Camp is conducted every year for third-year students.</p>
+</script></div>
+
+<h2>IV. Lists</h2>
+<div class="pair">
+<div>
+<p>Six subjects of the department are listed with an <b>unordered list</b>. <code>&lt;ul&gt;</code> creates the list and each <code>&lt;li&gt;</code> is a bullet point. (An ordered list <code>&lt;ol&gt;</code> would number them instead.) The facilities are written with a <b>description list</b>: <code>&lt;dl&gt;</code>, a term <code>&lt;dt&gt;</code> and its description <code>&lt;dd&gt;</code>.</p>
+<div class="listing"><div class="cap">Listing 3. List of subjects</div>
+<script type="text/plain" class="code">
+<ul class="subjects">
+  <li>Surveying</li>
+  <li>Strength of Materials</li>
+  <li>Structural Analysis</li>
+  <li>Geotechnical Engineering</li>
+  <li>Transportation Engineering</li>
+  <li>Environmental Engineering</li>
+</ul>
+</script></div>
+</div>
+<div class="plate" style="margin-top:0"><img src="screenshots/programmes.png" width="92%" alt="Programmes and subjects"><div>Plate 2. Subjects shown as a bulleted list</div></div>
+</div>
+
+<h2>V. Hyperlinks</h2>
+<p>A hyperlink is created using the anchor tag <code>&lt;a&gt;</code>, whose <code>href</code> attribute holds the destination. Three types are used: links to sections of the same page (<code>#faculty</code>), links to other websites &ndash; the college website, the Bureau of Indian Standards and AICTE &ndash; opened in a new tab with <code>target="_blank"</code>, and a <code>mailto:</code> e-mail link.</p>
+<div class="listing"><div class="cap">Listing 4. Navigation and external links</div>
+<script type="text/plain" class="code">
+<nav>
+  <a href="#about">About</a> <a href="#programmes">Programmes</a> <a href="#faculty">Faculty</a> ...
+</nav>
+See also: <a href="https://www.example.edu" target="_blank">College Website</a>,
+<a href="https://www.bis.gov.in" target="_blank">Bureau of Indian Standards</a>,
+<a href="https://www.aicte-india.org" target="_blank">AICTE</a>
+Email: <a href="mailto:civil@example.edu">civil@example.edu</a>
+</script></div>
+
+<h2>VI. Images</h2>
+<p>The department logo, showing a building with pillars, is inserted at the left of the header with the <code>&lt;img&gt;</code> tag. <code>src</code> specifies the image file, <code>alt</code> provides a text alternative for visually impaired users and for broken images, and <code>width</code> and <code>height</code> fix its size at 80 &times; 80 pixels. The image is moved to the left with the CSS property <code>float: left</code>.</p>
+<div class="listing"><div class="cap">Listing 5. Department logo</div>
+<script type="text/plain" class="code">
+<img src="images/civil-logo.svg" alt="Civil Engineering Department Logo" width="80" height="80">
+</script></div>
+
+<h2>VII. Tables</h2>
+<p>The faculty table lists five teachers. Besides the basic tags (<code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code>), it uses <code>&lt;caption&gt;</code> for a title and <code>&lt;thead&gt;</code>/<code>&lt;tbody&gt;</code> to separate the heading row from the data rows.</p>
+<div class="listing"><div class="cap">Listing 6. Faculty table</div>
+<script type="text/plain" class="code">
+<table>
+  <caption>Table: Faculty members of Civil Engineering</caption>
+  <thead>
+    <tr><th>Name</th><th>Designation</th><th>Area of Specialization</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Dr. Gopakumar R</td><td>Professor &amp; HOD</td><td>Structural Engineering</td></tr>
+    <tr><td>Dr. Bindu Mathew</td><td>Professor</td><td>Geotechnical Engineering</td></tr>
+    ... three more rows ...
+  </tbody>
+</table>
+</script></div>
+<div class="plate"><img src="screenshots/faculty.png" width="64%" alt="Faculty table"><div>Plate 3. Faculty table as displayed in the browser</div></div>
+
+<h2>VIII. Forms</h2>
+<p>The enquiry form is built with <code>&lt;form action="#" method="post"&gt;</code>. Each field has a <code>&lt;label&gt;</code> joined to it by <code>for</code>/<code>id</code>. The name, e-mail and phone fields use <code>type="text"</code>, <code>type="email"</code> and <code>type="tel"</code>; the phone field has <code>pattern="[0-9]{10}"</code> so only a 10-digit number is accepted. The course preference is a <code>&lt;select&gt;</code> list whose options are grouped into Undergraduate and Postgraduate using <code>&lt;optgroup&gt;</code>. Finally, <b>Submit</b> sends the data and <b>Reset</b> clears all the fields.</p>
+<div class="pair">
+<div class="listing"><div class="cap">Listing 7. Student enquiry form</div>
+<script type="text/plain" class="code">
+<form action="#" method="post">
+  <p><label for="sn">Your Name</label>
+     <input type="text" id="sn" name="name" required></p>
+  <p><label for="se">Email</label>
+     <input type="email" id="se" name="email" required></p>
+  <p><label for="sp">Phone Number</label>
+     <input type="tel" id="sp" name="phone" pattern="[0-9]{10}"></p>
+  <p><label for="sc">Course Preference</label>
+     <select id="sc" name="course">
+       <optgroup label="Undergraduate">
+         <option>B.Tech Civil Engineering</option>
+       </optgroup>
+       <optgroup label="Postgraduate">
+         <option>M.Tech Structural Engineering</option>
+       </optgroup>
+     </select></p>
+  <p><input type="submit" value="Submit">
+     <input type="reset" value="Reset"></p>
+</form>
+</script></div>
+<div class="plate" style="margin-top:14px"><img src="screenshots/enquiry.png" width="100%" alt="Enquiry form"><div>Plate 4. Enquiry form</div></div>
+</div>
+
+<h2>IX. Semantic HTML</h2>
+<p>Semantic elements are tags whose names explain their purpose. They replace a page full of anonymous <code>&lt;div&gt;</code> tags with meaningful blocks, which helps accessibility tools, improves search-engine results and makes the code easier to maintain.</p>
+<table class="grid">
+  <tr><th>Element</th><th>Purpose</th><th>Used for</th></tr>
+  <tr><td><code>&lt;header&gt;</code></td><td>Introductory content at the top of a page</td><td>Logo, department name and slogan</td></tr>
+  <tr><td><code>&lt;nav&gt;</code></td><td>A set of navigation links</td><td>Yellow menu bar</td></tr>
+  <tr><td><code>&lt;main&gt;</code></td><td>The unique main content of the page</td><td>All six sections</td></tr>
+  <tr><td><code>&lt;section&gt;</code></td><td>A thematic part of the content with its own heading</td><td>About, Programmes, Faculty, Facilities, Enquiry, Contact</td></tr>
+  <tr><td><code>&lt;footer&gt;</code></td><td>Closing content of the page</td><td>Copyright, author and &ldquo;Back to top&rdquo; link</td></tr>
+</table>
+
+<h2>X. Conclusion</h2>
+<p>The Civil Engineering department website was successfully created using basic HTML. Each requirement of the assignment &ndash; document structure, text formatting, lists, links, images, tables, forms and semantic elements &ndash; was used in a practical way, and the finished page is simple, organised and easy to navigate.</p>
+
+<h2>References</h2>
+<ol class="refs">
+  <li>MDN Web Docs, &ldquo;HTML: HyperText Markup Language&rdquo;. https://developer.mozilla.org/en-US/docs/Web/HTML</li>
+  <li>W3Schools, &ldquo;HTML Semantic Elements&rdquo;. https://www.w3schools.com/html/html5_semantic_elements.asp</li>
+  <li>Programiz, &ldquo;Learn HTML&rdquo;. https://www.programiz.com/html</li>
+  <li>Elisabeth Robson and Eric Freeman, <i>Head First HTML and CSS</i>, 2nd ed., O&rsquo;Reilly Media, 2012.</li>
+</ol>
+
+<script>
+document.querySelectorAll('script.code').forEach(function (s) {
+  var lines = s.textContent.replace(/^\n/, '').replace(/\s+$/, '').split('\n');
+  var ind = Math.min.apply(null, lines.filter(function (l) { return l.trim(); }).map(function (l) { return l.match(/^ */)[0].length; }));
+  var t = lines.map(function (l) { return l.slice(ind); }).join('\n')
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"([^"]*)"/g, '<span class="av">"$1"</span>')
+    .replace(/(&lt;\/?)([a-zA-Z0-9!]+)/g, '$1<span class="tg">$2</span>');
+  var pre = document.createElement('pre');
+  pre.innerHTML = t;
+  s.parentNode.replaceChild(pre, s);
+});
+</script>
+</body>
+</html>
